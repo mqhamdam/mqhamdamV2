@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:mqhamdam/presentation/widgets/ccard.dart';
+import 'package:mqhamdam/presentation/widgets/ctext.dart';
 
 class SliverView extends StatelessWidget {
   const SliverView({super.key});
@@ -16,15 +17,21 @@ class SliverView extends StatelessWidget {
           sliver: SliverAppBar(
             expandedHeight: 100,
             foregroundColor: Colors.transparent,
-            backgroundColor: Colors.transparent,
-            shadowColor: Colors.transparent,
+            backgroundColor: Colors.black54,
+            shadowColor: Colors.black,
             forceElevated: true,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(33)),
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
-              title: Text("Articles"),
+              title: CText(
+                "Articles",
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
             ),
           ),
         ),

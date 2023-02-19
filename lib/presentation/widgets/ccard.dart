@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mqhamdam/presentation/animation/like_button.dart';
+import 'package:mqhamdam/presentation/widgets/ctext.dart';
 
 class CCard extends StatelessWidget {
   const CCard({super.key});
@@ -19,7 +21,8 @@ class CCard extends StatelessWidget {
         side: BorderSide(width: 0.2, color: Colors.white54),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20),
+        padding:
+            const EdgeInsets.only(top: 20.0, left: 20, right: 20, bottom: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -41,10 +44,12 @@ class CCard extends StatelessWidget {
             Container(
               child: Row(
                 children: [
-                  TextButton.icon(
-                      onPressed: () {},
-                      icon: Icon(FontAwesomeIcons.heart),
-                      label: Text("242"))
+                  Row(
+                    children: [
+                      LikeButton((() {})),
+                      CText("12314"),
+                    ],
+                  ),
                 ],
               ),
             ),

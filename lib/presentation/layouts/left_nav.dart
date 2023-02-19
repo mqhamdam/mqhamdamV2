@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:mqhamdam/presentation/widgets/cbutton.dart';
+import 'package:mqhamdam/presentation/widgets/ctext.dart';
 
 class LeftNavSK extends StatelessWidget {
   const LeftNavSK({super.key});
@@ -15,30 +16,36 @@ class LeftNavSK extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(bottom: 15.0),
-              child: Text("Navigation"),
+              child: CText(
+                "Navigation",
+                textStyle: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    letterSpacing: 5),
+              ),
             ),
             Divider(
               color: Colors.grey,
               thickness: 0.4,
             ),
             CButton(
-              Text("Home"),
+              CText("Home"),
             ),
             CButton(
-              Text("Articles"),
+              CText("Articles"),
             ),
             CButton(
-              Text("Projects"),
+              CText("Projects"),
             ),
             CButton(
-              Text("About"),
+              CText("About"),
             ),
             Divider(
               color: Colors.grey,
               thickness: 0.4,
             ),
             CButton(
-              Text("Don't touch me"),
+              CText("Don't touch me"),
             ),
           ],
         ),

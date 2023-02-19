@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mqhamdam/presentation/widgets/ctext.dart';
 
 class TypedText extends StatefulWidget {
   const TypedText(this.text, {super.key});
@@ -76,6 +77,9 @@ class _TypedTextState extends State<TypedText> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Text(output);
+    return CText(
+      output,
+      textStyle: TextStyle(fontSize: 20),
+    );
   }
 }
