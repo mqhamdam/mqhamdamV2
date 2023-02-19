@@ -19,16 +19,12 @@ jobs:
       - run: flutter build web --release
         # 1. change path which exist lib/main.dart
         working-directory: ./mqhamdam
-      - run: 
-          # 2. change path to [existed lib/main.dart path]/build/web
+      - run: |
           cd mqhamdam/build/web
           git init
-           # 3. change your email
           git config --global user.email mq.hamdam@gmail.com
-          # 4. change your name
           git config --global user.name Hamdam
           git status
-          # 5. change your repository
           git remote add origin https://github.com/mqhamdam/mqhamdamv2.git
           git checkout -b gh-pages
           git add --all
