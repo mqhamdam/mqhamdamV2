@@ -23,7 +23,7 @@ jobs:
       - run: |
           ls -l
           pwd
-          cd mqhamdamv2/build/web
+          cd ./build/web
           git init
           git config --global user.email mq.hamdam@gmail.com
           git config --global user.name Hamdam
