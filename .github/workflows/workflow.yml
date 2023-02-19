@@ -19,7 +19,7 @@ jobs:
       # - run: flutter pub get
       - run: flutter build web --release
         # 1. change path which exist lib/main.dart s
-        working-directory: ./mqhamdamv2
+        working-directory: ./
       - run: |
           cd mqhamdamv2/build/web
           git init
