@@ -21,6 +21,8 @@ jobs:
         # 1. change path which exist lib/main.dart s
         working-directory: ./
       - run: |
+          ls -l
+          pwd
           cd mqhamdamv2/build/web
           git init
           git config --global user.email mq.hamdam@gmail.com
