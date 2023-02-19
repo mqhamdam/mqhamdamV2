@@ -26,9 +26,9 @@ jobs:
           cd ./build/web
           git init
           git config --global user.email mq.hamdam@gmail.com
-          git config --global user.name Hamdam
+          git config --global user.name mqhamdam
           git status
-          git remote add origin https://github.com/mqhamdam/mqhamdamv2.git
+          git remote add origin https://$@github.com/mqhamdam/mqhamdamv2.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
