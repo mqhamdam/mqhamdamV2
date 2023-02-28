@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:mqhamdam/presentation/layouts/footer.dart';
-import 'package:mqhamdam/presentation/layouts/header.dart';
 import 'package:mqhamdam/presentation/layouts/left_nav.dart';
-import 'package:mqhamdam/presentation/layouts/right_nav.dart';
 import 'package:mqhamdam/presentation/layouts/web_page_layout.dart';
-import 'package:mqhamdam/presentation/view/sliver_view.dart';
+import 'package:mqhamdam/presentation/view/about.dart';
 
-class HomeScreenUI extends StatelessWidget {
-  const HomeScreenUI({super.key});
+class AboutScreenUI extends StatelessWidget {
+  const AboutScreenUI({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const WebPageLayoutSK(
-      header: HeaderSK(),
+      header: Divider(),
       footer: FooterSK(),
-      body: SliverView(),
+      body: AboutView(),
       leftNav: LeftNavSK(),
-      rightNav: RightNavSK(),
+      //rightNav: C(),
     );
   }
 }

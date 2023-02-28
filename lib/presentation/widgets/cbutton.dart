@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CButton extends StatefulWidget {
-  CButton(this.child, {super.key});
-  Widget child;
+  const CButton(
+    this.child, {
+    required this.onTap,
+    super.key,
+  });
 
+  final Widget child;
+  final VoidCallback onTap;
   @override
   State<CButton> createState() => _CButtonState();
 }
@@ -18,7 +21,7 @@ class _CButtonState extends State<CButton> {
     return AnimatedPadding(
       duration: kThemeAnimationDuration,
       padding: EdgeInsets.all(isHovering ? 12 : 5.0),
-      child: Container(
+      child: SizedBox(
         width: double.infinity,
         child: TextButton(
           onHover: (value) {
@@ -26,7 +29,7 @@ class _CButtonState extends State<CButton> {
               isHovering = value;
             });
           },
-          onPressed: () {},
+          onPressed: widget.onTap,
           style: ButtonStyle(
             shape: MaterialStateProperty.all(
               RoundedRectangleBorder(
@@ -49,8 +52,9 @@ class _CButtonState extends State<CButton> {
 }
 
 class CAnimatedIconButton extends StatefulWidget {
-  const CAnimatedIconButton(this.child, {super.key});
+  const CAnimatedIconButton(this.child, {required this.onTap, super.key});
   final Widget child;
+  final VoidCallback onTap;
   @override
   State<CAnimatedIconButton> createState() => _CAnimatedIconButtonState();
 }
@@ -59,7 +63,6 @@ class _CAnimatedIconButtonState extends State<CAnimatedIconButton>
     with SingleTickerProviderStateMixin {
   late bool isHovering;
 
-  late Animation<double> _animation;
   late AnimationController _animationController;
 
   void onHover(bool hover) {
@@ -72,7 +75,7 @@ class _CAnimatedIconButtonState extends State<CAnimatedIconButton>
 
   @override
   void initState() {
-    // TODO: implement initState
+    
     _animationController = AnimationController(
       vsync: this,
       duration: kThemeAnimationDuration,
@@ -86,17 +89,15 @@ class _CAnimatedIconButtonState extends State<CAnimatedIconButton>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ScaleTransition(
-        scale: _animationController,
-        child: TextButton(
-          onHover: onHover,
-          onPressed: () {},
-          child: AnimatedPadding(
-            duration: kThemeAnimationDuration,
-            padding: EdgeInsets.all(isHovering ? 12 : 8.0),
-            child: widget.child,
-          ),
+    return ScaleTransition(
+      scale: _animationController,
+      child: TextButton(
+        onHover: onHover,
+        onPressed: widget.onTap,
+        child: AnimatedPadding(
+          duration: kThemeAnimationDuration,
+          padding: EdgeInsets.all(isHovering ? 12 : 8.0),
+          child: widget.child,
         ),
       ),
     );

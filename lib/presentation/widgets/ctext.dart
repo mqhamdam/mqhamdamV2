@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CText extends StatelessWidget {
-  const CText(this.data, {super.key, this.textStyle = const TextStyle()});
+  const CText(this.data,  {super.key, this.textStyle = const TextStyle()});
 
   final String data;
   final TextStyle textStyle;

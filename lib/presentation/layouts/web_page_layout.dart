@@ -7,9 +7,9 @@ class WebPageLayoutSK extends StatelessWidget {
       required this.footer,
       required this.body,
       required this.leftNav,
-      required this.rightNav});
-  final Widget header, footer, body, leftNav, rightNav;
-
+      this.rightNav});
+  final Widget header, footer, body, leftNav;
+  final Widget? rightNav;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +31,7 @@ class WebPageLayoutSK extends StatelessWidget {
                   height: MediaQuery.of(context).size.height / 6,
                   child: header),
               Container(
-                height: MediaQuery.of(context).size.height / 1.2,
+                //height: MediaQuery.of(context).size.height / 1.2,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,10 +45,16 @@ class WebPageLayoutSK extends StatelessWidget {
                       flex: 8,
                       child: body,
                     ),
-                    Flexible(
-                      flex: 3,
-                      child: rightNav,
-                    ),
+                    Builder(builder: (context) {
+                      if (this.rightNav != null) {
+                        return Flexible(
+                          flex: 3,
+                          child: rightNav!,
+                        );
+                      } else {
+                        return Container();
+                      }
+                    })
                   ],
                 ),
               ),

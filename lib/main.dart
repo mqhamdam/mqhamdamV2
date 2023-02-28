@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mqhamdam/app_constants.dart';
+import 'package:mqhamdam/app_router.dart';
 import 'package:mqhamdam/presentation/ui/home_screen/home_screen.dart';
 
 void main() {
@@ -13,13 +15,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: AppRouter.generateRoutes,
+      initialRoute: KRouteNames.initialRoute,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme:
-            ColorScheme.dark(primary: Color.fromRGBO(238, 238, 238, 1)),
+            const ColorScheme.dark(primary: Color.fromRGBO(238, 238, 238, 1)),
         textTheme: Typography.whiteCupertino,
       ),
-      home: HomeScreenUI(),
+      home: const HomeScreenUI(),
     );
   }
 }
