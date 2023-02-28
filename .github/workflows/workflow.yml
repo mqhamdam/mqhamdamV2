@@ -31,5 +31,5 @@ jobs:
           git add .
           echo "git addd"
           git commit -m "update"
-          echo "git commit";
+          echo "git commits";
           git push origin gh-pages -f
