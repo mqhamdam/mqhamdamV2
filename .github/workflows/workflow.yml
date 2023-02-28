@@ -32,4 +32,8 @@ jobs:
           echo "git addd"
           git commit -m "update"
           echo "git commits";
-          git push origin gh-pages -f
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.COMMIT_SECRET }}
+          branch: gh-pages
