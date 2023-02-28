@@ -7,7 +7,7 @@ jobs:
   build:
     name: Build Web
     env:
-      GH_ACCESS_TOKEN: ${{ secrets.COMMIT_TOKEN }}
+      commit_secret: $
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -26,7 +26,7 @@ jobs:
           git config --global user.email mq.hamdam@gmail.com
           git config --global user.name mqhamdam
           git status
-          git remote add origin https://$GH_ACCESS_TOKEN@github.com/mqhamdam/mqhamdamv2.git
+          git remote add origin https://$@github.com/mqhamdam/mqhamdamv2.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"

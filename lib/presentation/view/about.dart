@@ -190,7 +190,8 @@ class AboutView extends StatelessWidget {
                                 ),
                               ),
                               TextSpan(
-                                text: "C++, C, Java, JavaScript, Dart, Python",
+                                text:
+                                    "C++, C, Java, JavaScript, Dart, Python, TypeScript",
                                 style: GoogleFonts.sourceCodePro(
                                   textStyle: CTextStyles.h3,
                                 ),
@@ -208,7 +209,7 @@ class AboutView extends StatelessWidget {
                                 ),
                               ),
                               TextSpan(
-                                text: "Flutter, ReactJS, Node.JS, MFC",
+                                text: "Flutter, ReactJS, MFC",
                                 style: GoogleFonts.sourceCodePro(
                                   textStyle: CTextStyles.h3,
                                 ),
@@ -245,7 +246,7 @@ class AboutView extends StatelessWidget {
                               ),
                               TextSpan(
                                 text:
-                                    "AWS, Firebase, MongoDB, REST/Socket API, SQL/NoSQL, GraphQL, Domain-Driven Design, Event-Driven Design, MVVC, MVC, MVP, Linux, AI, Clean Architecture, (BLoC + freezed).",
+                                    "AWS, Firebase, MongoDB, REST/Socket API, SQL/NoSQL, NodeJS, OOP, Domain-Driven Design, Event-Driven Design, MVVC, MVC, MVP, Linux, AI, Clean Architecture, (BLoC + freezed).",
                                 style: GoogleFonts.sourceCodePro(
                                   textStyle: CTextStyles.h3,
                                 ),

@@ -14,12 +14,18 @@ class AppRouter {
         );
       case KRouteNames.aboutRoute:
         return MaterialPageRoute(
-          builder: (ctx) => const AboutScreenUI(),
+          builder: (ctx) => Title(
+              color: Colors.white,
+              title: "About | Portfolio",
+              child: const AboutScreenUI()),
           settings: settings,
         );
       default:
         return MaterialPageRoute(
-          builder: (context) => const NotFound(),
+          builder: (context) => Title(
+              color: Colors.white,
+              title: "404 - Not Found",
+              child: const NotFound()),
           settings: settings,
         );
     }

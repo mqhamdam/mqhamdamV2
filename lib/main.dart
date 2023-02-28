@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      
       onGenerateRoute: AppRouter.generateRoutes,
       initialRoute: KRouteNames.initialRoute,
-      title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme:
             const ColorScheme.dark(primary: Color.fromRGBO(238, 238, 238, 1)),

@@ -11,12 +11,16 @@ class HomeScreenUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const WebPageLayoutSK(
-      header: HeaderSK(),
-      footer: FooterSK(),
-      body: SliverView(),
-      leftNav: LeftNavSK(),
-      rightNav: RightNavSK(),
+    return Title(
+      color: Colors.white,
+      title: "Portfolio | Home",
+      child: const WebPageLayoutSK(
+        header: HeaderSK(),
+        footer: FooterSK(),
+        body: SliverView(),
+        leftNav: LeftNavSK(),
+        rightNav: RightNavSK(),
+      ),
     );
   }
 }

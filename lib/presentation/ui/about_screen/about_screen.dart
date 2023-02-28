@@ -9,12 +9,16 @@ class AboutScreenUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const WebPageLayoutSK(
-      header: Divider(),
-      footer: FooterSK(),
-      body: AboutView(),
-      leftNav: LeftNavSK(),
-      //rightNav: C(),
+    return Title(
+      color: Colors.white,
+      title: "Portfolio | About",
+      child: const WebPageLayoutSK(
+        header: Divider(),
+        footer: FooterSK(),
+        body: AboutView(),
+        leftNav: LeftNavSK(),
+        //rightNav: C(),
+      ),
     );
   }
 }
