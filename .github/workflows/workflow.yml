@@ -22,6 +22,7 @@ jobs:
         working-directory: ./
       - run: |
           cd ./build/web
+          hub auth $
           git init
           git config user.name github-actions
           git config user.email github-actions@github.com
@@ -32,4 +33,8 @@ jobs:
           echo "git addd"
           git commit -m "update"
           echo "git commit";
-          git push origin gh-pages -f
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.COMMIT_SECRET }}
+          branch: gh-pages
