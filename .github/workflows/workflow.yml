@@ -32,7 +32,7 @@ jobs:
           echo "git addd"
           git commit -m "update"
           echo "git commits";
-          echo $secrets.COMMIT_SECRET 
+          echo ${{ secrets.COMMIT_SECRET }}
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
