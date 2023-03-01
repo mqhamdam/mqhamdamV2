@@ -23,10 +23,10 @@ jobs:
       - run: |
           cd ./build/web
           git init
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name Muqimov Hamdam
+          git config user.email mq.hamdam@gmail.com
           git status
-          git remote add origin https://$@github.com/mqhamdam/mqhamdamv2.git
+          git remote add origin https://${{ secrets.COMMIT_SECRET }}@github.com/mqhamdam/mqhamdamv2.git
           git checkout -b gh-pages
           git add .
           echo "git addd"
